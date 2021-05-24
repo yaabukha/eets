@@ -28,6 +28,18 @@
         <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
+
+    <form action="/home" method="POST">
+        <p>Name <input type="text" name="Name" /></p>
+        <p>City <input type="text" name="City" /></p>
+        <p>Country <input type="text" name="Country" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+
+    {% if feedback %}
+    <p class="text-danger float-right">{{ feedback }}</p>
+    {% endif %}
+
 </div>
 
 {% endblock %}
