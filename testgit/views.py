@@ -22,7 +22,7 @@ def home():
         print(req.get("City"))
         feedback = req.get("City")
         time.sleep( 5 )
-        os.system('/home/site/wwwroot/TerraForm/terraform apply -auto-approve ')
+        os.system('/home/site/wwwroot/TerraForm/terraform -chdir=/home/site/wwwroot/TerraForm  apply -auto-approve ')
         feedback = "Resource Group has been created"
         
     """Renders the home page."""
