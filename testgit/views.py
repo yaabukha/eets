@@ -21,8 +21,8 @@ def home():
         req = request.form
         print(req.get("City"))
         feedback = req.get("City")
-        time.sleep( 5 )
-        os.system('/home/site/wwwroot/TerraForm/terraform -chdir=/home/site/wwwroot/TerraForm  apply -auto-approve ')
+        rgName = req.get("City")
+        os.system('/home/site/wwwroot/TerraForm/terraform -chdir=/home/site/wwwroot/TerraForm  apply -var resourceGroupName='+rgName+ ' -auto-approve ')
         feedback = "Resource Group has been created"
         
     """Renders the home page."""
