@@ -22,9 +22,9 @@ def home():
         print(req.get("City"))
         feedback = req.get("City")
         time.sleep( 5 )
-        os.system('ls -ltr')
-        #feedback = "Resource Group has been created"
-        feedback = os.system('ls -ltr')
+        os.system('/home/site/wwwroot/TerraForm/terraform apply -auto-approve ')
+        feedback = "Resource Group has been created"
+        
     """Renders the home page."""
     return render_template(
         'index.html',
