@@ -34,14 +34,7 @@ def home():
        
     )
 
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        year=datetime.now().year,
-        message='any feedback is appreciated'
-    )
+
 
 @app.route('/about')
 def about():
@@ -50,7 +43,7 @@ def about():
         'about.html',
         title='About',
         year=datetime.now().year,
-        message='Your application description page.'
+        message='Group 1  contacts'
     )
 
 
