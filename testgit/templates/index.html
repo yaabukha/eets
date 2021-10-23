@@ -3,33 +3,12 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>EETS</h1>
-    <p class="lead">trial#8.</p>
-    <p><a href="https://www.bing.com" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>EETS - 7302 </h1>
+    <h2>Wireshark </h2>
+    <p class="lead">Wireshark is the foremost and widely-used network protocol analyzer. It lets you see what is happening on your network at a microscopic level and is the de facto standard across many commercial and non-profit enterprises, government agencies, and educational institutions.</p>
+    <p><a href="https://www.wireshark.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-           we will create Azure Resource Group in your subscription, please fill the resource group name
-        </p>
-        
-    </div>
- 
 
-
-    <form action="/home" method="POST">
-        <p>Sub <input type="text" name="Name" /></p>
-        <p>Resource Group Name <input type="text" name="City" /></p>
-        
-        <p><input type="submit" value="Submit" /></p>
-    </form>
-
-    {% if feedback %}
-    <p class="text-danger float-right">{{ feedback }}</p>
-    {% endif %}
-
-</div>
 
 {% endblock %}
