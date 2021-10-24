@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="jumbotron">
+    Capture from<SELECT name="vm">
+        {% for vm in vmList %}
+        <option value="{{vm}}">{{vm}}</option>
+
+        {% endfor %}
+    </SELECT>
+
+
+                <form method="post">
+                    <select name="selectedVM">
+                        {% for vm in vmList %}
+                        <option value="{{vm}}">{{vm}}</option>
+
+                        {% endfor %}
+                    </select>
+                    <p><input type="submit" value="Submit" /></p>
+                </form>
+</div>
+
+{% endblock %}
+
