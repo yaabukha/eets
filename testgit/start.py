@@ -3,7 +3,8 @@ import paramiko
 from scp import SCPClient   
    
 # declare credentials   
-host = '10.22.1.4'   
+# host = '10.22.1.4'   
+host =  subprocess.getoutput('dig EETS7302VM01.internal.cloudapp.net +short')
 username = 'eets7302'   
 password = 'EETS@123'   
    
