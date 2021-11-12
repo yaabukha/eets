@@ -29,7 +29,7 @@ channel.exec_command('python3 /home/eets7302/remoteStop.py > /dev/null 2>&1 &')
 
 # copy the file accross
 with SCPClient(con.get_transport()) as scp:
-    scp.get('/home/eets7302/EETS7302VM01.pcap', '/home/eets7302/')
+    scp.get('/home/eets7302/EETS7302VM01.pcap', '/home/eets7302/uploads/')
 
 
 
