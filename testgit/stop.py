@@ -44,13 +44,15 @@ def stopCapture():
 
         # copy  he file accross
         with SCPClient(con1.get_transport()) as scp:
-          scp.get('/home/eets7302/EETS7302VM01.pcap', '/home/eets7302/uploads/EETS7302VM01.pcap')
+          scp.get('/home/eets7302/EETS7302VM01.pcap', '/home/eets7302/tempDownload/EETS7302VM01.pcap')
         with SCPClient(con2.get_transport()) as scp:
-          scp.get('/home/eets7302/EETS7302VM01.pcap', '/home/eets7302/uploads/EETS7302VM01.pcap')
+          scp.get('/home/eets7302/EETS7302VM02.pcap', '/home/eets7302/tempDownload/EETS7302VM02.pcap')
 
 
-        cmd = 'zip /home/eets7302/uploads/captures.zip /home/eets7302/uploads/EETS7302VM01.pcap'
+        cmd = 'zip /home/eets7302/tempDownload/captures.zip /home/eets7302/tempDownload/EETS7302VM01.pcap  /home/eets7302/tempDownload/EETS7302VM02.pcap'
         subprocess.Popen([cmd],shell=True)
+        move = 'mv /home/eets7302/tempDownload/captures.zip /home/eets7302/uploads/captures.zip'
+        subprocess.Popen([move],shell=True)
 
 
         return True
