@@ -8,7 +8,7 @@ from scp import SCPClient
 def startCapture():
     try:
         host1 =  subprocess.getoutput('dig EETS7302VM01.internal.cloudapp.net +short')
-        host2 =  subprocess.getoutput('dig EETS7302VM01.internal.cloudapp.net +short')
+        host2 =  subprocess.getoutput('dig EETS7302VM02.internal.cloudapp.net +short')
         username = 'eets7302'
         password = 'EETS@123'
         #connect to server
