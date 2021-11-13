@@ -18,11 +18,13 @@ def stopCapture():
 
         # connect to server
         con1 = paramiko.SSHClient()
+        con1.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         con1.load_system_host_keys()
         con1.connect(host1, username=username, password=password)
         transport1 = con1.get_transport()
         channel1 = transport1.open_session()
         con2 = paramiko.SSHClient()
+        con2.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         con2.load_system_host_keys()
         con2.connect(host2, username=username, password=password)
         transport2 = con2.get_transport()
