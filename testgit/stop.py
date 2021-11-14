@@ -2,7 +2,7 @@ import subprocess
 import os
 import paramiko
 from scp import SCPClient
-
+import time
 
 
 
@@ -48,9 +48,10 @@ def stopCapture():
         with SCPClient(con2.get_transport()) as scp:
           scp.get('/home/eets7302/EETS7302VM02.pcap', '/home/eets7302/tempDownload/EETS7302VM02.pcap')
 
-
+        time.sleep(2)
         cmd = 'zip /home/eets7302/tempDownload/captures.zip /home/eets7302/tempDownload/EETS7302VM01.pcap  /home/eets7302/tempDownload/EETS7302VM02.pcap'
         subprocess.Popen([cmd],shell=True)
+        time.sleep(2)
         move = 'mv /home/eets7302/tempDownload/captures.zip /home/eets7302/uploads/captures.zip'
         subprocess.Popen([move],shell=True)
 
